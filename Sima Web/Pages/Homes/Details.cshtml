@@ -1,0 +1,52 @@
+﻿@page
+@model WebApplication1.Pages.Homes.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Quarter</h4>
+    <hr/>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Quarter.Size)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Quarter.Size)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Quarter.AddressStreet)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Quarter.AddressStreet)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Quarter.AddressArea)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Quarter.AddressArea.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Quarter.Owner)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Quarter.Owner.AddressStreet)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Quarter.TypeHouse)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Quarter.TypeHouse.Name)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit"
+       asp-route-id="@Model.Quarter.Id">
+        Edit
+    </a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
